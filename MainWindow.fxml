@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="188.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainWindow">
+	<children>
+		<Label fx:id="hashLabel" layoutX="10.0" layoutY="10.0" text="Hash" />
+		<TextField fx:id="hashTextField" layoutX="10.0" layoutY="30.0" prefWidth="280.0" text="098f6bcd4621d373cade4e832627b4f6" />
+		<Label fx:id="charsLabel" layoutX="10.0" layoutY="62.0" text="Characters" />
+		<TextField fx:id="charsTextField" layoutX="10.0" layoutY="81.0" prefWidth="280.0" text="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" />
+		<RadioButton fx:id="md5Radio" layoutX="73.0" layoutY="120.0" mnemonicParsing="false" selected="true" text="MD5">
+			<toggleGroup>
+				<ToggleGroup fx:id="mode" />
+			</toggleGroup>
+		</RadioButton>
+		<RadioButton fx:id="sha1Radio" layoutX="171.0" layoutY="120.0" mnemonicParsing="false" text="SHA1" toggleGroup="$mode" />
+		<Button fx:id="button" layoutX="90.0" layoutY="150.0" prefWidth="120.0" mnemonicParsing="false" onAction="#crack" text="Crack" />
+		<ProgressIndicator fx:id="progress" layoutX="124.0" layoutY="50.0" visible="false" />
+	</children>
+</AnchorPane>
